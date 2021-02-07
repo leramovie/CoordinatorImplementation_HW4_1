@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
         
+    weak var coordinator: ProfileNavCoordinator?
+
     private var posts: [PostDetail] = [] {
         didSet {
             tableView.reloadData()
