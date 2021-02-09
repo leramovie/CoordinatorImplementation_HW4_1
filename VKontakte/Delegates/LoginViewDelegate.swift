@@ -8,6 +8,6 @@
 import UIKit
 
 protocol LoginViewDelegate: AnyObject {
-    func didTapLoginButton(filledLogin: String, filledPassword: String)
+    func didTapLoginButton()
 }
 

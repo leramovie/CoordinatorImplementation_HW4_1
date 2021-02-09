@@ -8,7 +8,9 @@
 import UIKit
 
 class LoginViewController: UIViewController, LoginViewDelegate {
-       
+    
+    weak var coordinator: ProfileNavCoordinator?
+
     private let loginView: LoginView = {
         let loginView = LoginView()
         loginView.backgroundColor = .white
@@ -89,12 +91,8 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         NSLayoutConstraint.activate(constraints)
     }
     
-    func didTapLoginButton(filledLogin: String, filledPassword: String) {
-        print("Кнопка Логин нажата")
-        
-        let vc = ProfileViewController()
-        navigationController?.pushViewController(vc, animated: true)
-        
+    func didTapLoginButton() {
+        coordinator?.logIn()
     }
 }
 

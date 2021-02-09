@@ -8,6 +8,8 @@
 import UIKit
 
 class PhotosViewController: UIViewController {
+    
+    weak var coordinator: ProfileNavCoordinator?
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

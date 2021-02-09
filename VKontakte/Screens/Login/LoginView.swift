@@ -128,16 +128,7 @@ class LoginView: UIView {
     }
     
     @objc func loginButtonTapped() {
-        
-        guard let loginFilled = loginTextField.text,
-              let passwordFilled = passwordTextField.text,
-              !loginFilled.isEmpty && !passwordFilled.isEmpty else {
-            
-            print("Нужно заполнить оба поля")
-            return
-        }
-        
-        delegate?.didTapLoginButton(filledLogin: loginFilled, filledPassword: passwordFilled)
+        delegate?.didTapLoginButton()
     }
 }
 

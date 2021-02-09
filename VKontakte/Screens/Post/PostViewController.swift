@@ -10,6 +10,9 @@ import UIKit
 
 class PostViewController: UIViewController {
     
+    weak var coordinator: FeedNavCoordinator?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .purple
